@@ -15,6 +15,7 @@ defmodule PublisherService.UserController do
 
     case Repo.insert(changeset) do
       {:ok, user} ->
+        PublisherService.Endpoint.broadcast("activity:all", "new:msg", user)
         conn
         |> put_status(:created)
         |> put_resp_header("location", user_path(conn, :show, user))
