@@ -6,14 +6,24 @@ defmodule SubscriberService.ActivitySubscriber do
   end
 
   def init(channel) do
-    pid = Kernel.self
+    pid = self
     ref = SubscriberService.Endpoint.subscribe(pid, "activity:all")
     {:ok, {pid, channel, ref}}
   end
 
-  def handle_info(message, {pid, channel, ref} = state) do
-    IO.inspect "Received Message:"
+  def handle_info(%{event: "new:user"} = message, state) do
+    IO.inspect "#######################"
+    IO.inspect "New User - Received Message:"
     IO.inspect message
+    IO.inspect "#######################"
+    {:noreply, state}
+  end
+
+  def handle_info(message, state) do
+    IO.inspect "#######################"
+    IO.inspect "Catch All - Received Message:"
+    IO.inspect message
+    IO.inspect "#######################"
     {:noreply, state}
   end
 end
