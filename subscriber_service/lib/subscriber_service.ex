@@ -13,6 +13,7 @@ defmodule SubscriberService do
       supervisor(SubscriberService.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(SubscriberService.Worker, [arg1, arg2, arg3]),
+      supervisor(SubscriberService.ActivitySubscriber, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
