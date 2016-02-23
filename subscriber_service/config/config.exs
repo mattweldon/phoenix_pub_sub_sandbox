@@ -11,7 +11,7 @@ config :subscriber_service, SubscriberService.Endpoint,
   root: Path.dirname(__DIR__),
   secret_key_base: "cqpQFBZ8O/Z6UWQ26LdWbNdN24bxOoqKLEbXAUbB7y8T2qusWWsHUdwKC7HsLWEM",
   render_errors: [accepts: ~w(json)],
-  pubsub: [name: :phoenix_pub_sub,
+  pubsub: [name: :phoenix_pub_sub_sandbox,
            adapter: Phoenix.PubSub.Redis]
 
 # Configures Elixir's Logger

@@ -11,7 +11,7 @@ config :publisher_service, PublisherService.Endpoint,
   root: Path.dirname(__DIR__),
   secret_key_base: "xRLAlBr+5wCZ0mYh8E/ntgiXGUpJ8eOhPULPA6bVIbfFhg3ubiY/4j9+aAcCrH4u",
   render_errors: [accepts: ~w(json)],
-  pubsub: [name: :phoenix_pub_sub,
+  pubsub: [name: :phoenix_pub_sub_sandbox,
            adapter: Phoenix.PubSub.Redis]
 
 # Configures Elixir's Logger
