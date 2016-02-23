@@ -7,7 +7,7 @@ defmodule SubscriberService.ActivitySubscriber do
 
   def init(channel) do
     pid = self
-    ref = SubscriberService.Endpoint.subscribe(pid, "activity:all")
+    ref = SubscriberService.Endpoint.subscribe(pid, channel)
     {:ok, {pid, channel, ref}}
   end
 
