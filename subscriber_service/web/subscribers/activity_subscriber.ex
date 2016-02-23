@@ -6,9 +6,9 @@ defmodule SubscriberService.ActivitySubscriber do
   end
 
   def init(channel) do
-    {:ok, pid} = Kernel.self
-    {:ok, ref} = SubscriberService.PubSub.subscribe
-    {:ok, {pid, channel, ref}
+    pid = Kernel.self
+    ref = SubscriberService.Endpoint.subscribe(pid, "activity:all")
+    {:ok, {pid, channel, ref}}
   end
 
   def handle_info(message, {pid, channel, ref} = state) do

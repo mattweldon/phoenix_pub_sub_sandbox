@@ -12,7 +12,7 @@ config :subscriber_service, SubscriberService.Endpoint,
   secret_key_base: "cqpQFBZ8O/Z6UWQ26LdWbNdN24bxOoqKLEbXAUbB7y8T2qusWWsHUdwKC7HsLWEM",
   render_errors: [accepts: ~w(json)],
   pubsub: [name: :phoenix_pub_sub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.Redis]
 
 # Configures Elixir's Logger
 config :logger, :console,

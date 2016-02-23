@@ -19,7 +19,7 @@ defmodule PublisherService.Mixfile do
   def application do
     [mod: {PublisherService, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :phoenix_pubsub_redis]]
   end
 
   # Specifies which paths to compile per environment.
@@ -34,7 +34,8 @@ defmodule PublisherService.Mixfile do
      {:phoenix_ecto, "~> 2.0"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.9"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+   {:phoenix_pubsub_redis, "~> 2.0.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

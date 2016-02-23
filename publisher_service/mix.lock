@@ -7,8 +7,10 @@
   "gettext": {:hex, :gettext, "0.10.0"},
   "phoenix": {:hex, :phoenix, "1.1.4"},
   "phoenix_ecto": {:hex, :phoenix_ecto, "2.0.1"},
+  "phoenix_pubsub_redis": {:hex, :phoenix_pubsub_redis, "2.0.0"},
   "plug": {:hex, :plug, "1.1.1"},
   "poison": {:hex, :poison, "1.5.2"},
   "poolboy": {:hex, :poolboy, "1.5.1"},
   "postgrex": {:hex, :postgrex, "0.11.1"},
-  "ranch": {:hex, :ranch, "1.2.1"}}
+  "ranch": {:hex, :ranch, "1.2.1"},
+  "redo": {:hex, :redo, "2.0.1"}}
